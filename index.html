@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="description" content="Catálogo oficial del concesionario de LOS ÁNGLES RP. Consulta vehículos y prepara tu solicitud de compra por ticket de Discord.">
+  <title>Concesionario | LOS ÁNGLES RP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="LOS ÁNGLES RP, inicio">
+      <span class="brand-mark" aria-hidden="true">LA<span>•</span></span>
+      <span class="brand-copy"><strong>LOS ÁNGLES RP</strong><small>CONCESIONARIO OFICIAL</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">☰</button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#solicitud">Solicitar vehículo</a>
+      <a href="#normas">Condiciones</a>
+    </nav>
+    <a class="header-cta" href="#catalogo">Explorar vehículos <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span> CONCESIONARIO · ROLEPLAY SERIO</p>
+        <h1 id="hero-title">TU PRÓXIMO<br><span>CAPÍTULO</span><br>EMPIEZA AQUÍ.</h1>
+        <p class="hero-lead">LOS ÁNGLES RP</p>
+        <p class="hero-text">Un concesionario creado para quienes viven cada historia al volante. Explora el catálogo, encuentra tu próximo vehículo y prepara tu solicitud para tramitarla mediante un ticket oficial de Discord.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalogo">Ver catálogo <span aria-hidden="true">↓</span></a>
+          <a class="button button-ghost" href="#servidor">Conoce el servidor</a>
+        </div>
+        <div class="hero-stats" aria-label="Características del concesionario">
+          <div><strong>4</strong><span>Gamas</span></div>
+          <div><strong>100%</strong><span>Rol por ticket</span></div>
+          <div><strong>RP</strong><span>Compra dentro del rol</span></div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span></span> DESLIZA PARA EXPLORAR</div>
+    </section>
+
+    <section class="intro section-wrap" id="servidor" aria-labelledby="intro-title">
+      <div class="section-kicker">01 / QUIÉNES SOMOS</div>
+      <div class="intro-layout">
+        <h2 id="intro-title">EL ROL ES<br>LA HISTORIA.<br><span>EL COCHE, PARTE DE ELLA.</span></h2>
+        <div class="intro-copy">
+          <p class="large-copy">En <strong>LOS ÁNGLES RP</strong> apostamos por un roleplay serio, inmersivo y pensado para disfrutar en comunidad.</p>
+          <p>Roleamos para pasarlo bien, crear historias y dar sentido a cada decisión. Buscamos una economía equilibrada y un entorno en el que el progreso, las relaciones y la interpretación importen tanto como el vehículo que conduces.</p>
+          <div class="value-list">
+            <div><span class="value-number">01</span><div><strong>Roleplay serio</strong><small>Historias coherentes y respeto por la interpretación.</small></div></div>
+            <div><span class="value-number">02</span><div><strong>Economía equilibrada</strong><small>Vehículos y progreso adaptados a la experiencia del servidor.</small></div></div>
+            <div><span class="value-number">03</span><div><strong>Comunidad primero</strong><small>El objetivo es disfrutar y construir buenas historias juntos.</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><div class="section-kicker">02 / INVENTARIO</div><h2 id="catalog-title">ENCUENTRA TU<br><span>PRÓXIMO VEHÍCULO.</span></h2></div>
+          <p>Abre una gama, elige una categoría y pulsa sobre un vehículo para consultar su descripción. Los precios se muestran en dólares del servidor.</p>
+        </div>
+        <div class="catalog-toolbar">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="vehicle-search" type="search" placeholder="Buscar vehículo..." autocomplete="off" aria-label="Buscar vehículo por nombre"></label>
+          <span class="catalog-hint">SELECCIONA UNA GAMA PARA EMPEZAR</span>
+        </div>
+        <div id="catalogue" class="catalogue" aria-live="polite">
+          <p class="loading-message">Preparando catálogo…</p>
+        </div>
+        <p id="no-results" class="no-results" hidden>No se han encontrado vehículos con esa búsqueda. Prueba con otro nombre.</p>
+      </div>
+    </section>
+
+    <section class="vip-banner section-wrap" aria-labelledby="vip-title">
+      <div class="vip-symbol" aria-hidden="true">✦</div>
+      <div class="vip-copy"><p class="section-kicker">UNIDADES EXCLUSIVAS</p><h2 id="vip-title">UNA LEYENDA.<br><span>SOLO 4 EN EL MUNDO.</span></h2><p>El Benefactor Krieger es un vehículo VIP extraordinario dentro del servidor. Su precio y disponibilidad están sujetos a la validación del equipo.</p></div>
+      <div class="vip-price"><small>BENEFACTOR KRIEGER</small><strong>30.000.000<span>$</span></strong><a href="#solicitud" class="text-link">Consultar solicitud <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="request-section" id="solicitud" aria-labelledby="request-title">
+      <div class="section-wrap request-layout">
+        <div class="request-intro">
+          <div class="section-kicker">03 / TRAMITACIÓN</div>
+          <h2 id="request-title">PREPARA TU<br><span>SOLICITUD.</span></h2>
+          <p>Rellena los datos y generaremos un mensaje ordenado para que lo copies en un ticket de Discord. La web no vende vehículos ni envía solicitudes automáticamente.</p>
+          <div class="request-note"><span class="note-icon" aria-hidden="true">i</span><p><strong>Importante:</strong> no compartas aquí contraseñas, direcciones ni otros datos sensibles. Tu solicitud se genera en tu navegador y no se envía a ningún servidor desde esta página.</p></div>
+        </div>
+        <form id="request-form" class="request-form">
+          <div class="form-heading"><span>FORMULARIO DE INTERÉS</span><span class="form-step">LA / 01</span></div>
+          <div class="form-grid">
+            <div class="field full"><label for="real-name">Nombre real <span>*</span></label><input id="real-name" name="realName" required maxlength="80" autocomplete="name" placeholder="Tu nombre"></div>
+            <div class="field"><label for="character-name">Nombre y apellido IC <span>*</span></label><input id="character-name" name="characterName" required maxlength="80" placeholder="Nombre de tu personaje"></div>
+            <div class="field"><label for="character-id">ID / datos IC</label><input id="character-id" name="characterId" maxlength="80" placeholder="ID o información de rol"></div>
+            <div class="field full"><label for="vehicle-select">Vehículo que quieres <span>*</span></label><select id="vehicle-select" name="vehicle" required><option value="">Selecciona un vehículo del catálogo</option></select><small class="field-help">El precio aparecerá al seleccionar el vehículo.</small><div id="selected-vehicle" class="selected-vehicle" hidden></div></div>
+            <div class="field"><label for="availability">Disponibilidad <span>*</span></label><select id="availability" name="availability" required><option value="">Elige una opción</option><option>Hoy</option><option>Mañana</option><option>En los próximos días</option><option>Fin de semana</option><option>Otro horario (detallar en notas)</option></select></div>
+            <div class="field"><label for="time-range">Hora aproximada</label><input id="time-range" name="timeRange" maxlength="80" placeholder="Ej. 18:00–21:00"></div>
+            <div class="field full"><label for="extra-notes">Notas adicionales (opcional)</label><textarea id="extra-notes" name="notes" rows="3" maxlength="500" placeholder="Información útil para coordinar el trámite..."></textarea></div>
+          </div>
+          <label class="consent"><input type="checkbox" id="confirm-ticket" required><span>Entiendo que debo tramitar la compra exclusivamente mediante un ticket oficial de Discord y que este formulario solo prepara el texto.</span></label>
+          <button class="button button-primary form-submit" type="submit">Generar texto del ticket <span aria-hidden="true">↗</span></button>
+          <p class="form-privacy">El formulario y el ticket se guardan localmente en este navegador para que puedas volver más tarde. Si compartes dispositivo, borra los datos al terminar.</p>
+          <div id="generated-wrap" class="generated-wrap" hidden>
+            <div class="generated-heading"><strong>MENSAJE LISTO PARA TU TICKET</strong><span>REVÍSALO ANTES DE ENVIAR</span></div>
+            <textarea id="generated-message" rows="12" readonly aria-label="Texto generado para el ticket"></textarea>
+            <div class="generated-actions"><button id="copy-message" class="button button-primary" type="button">Copiar mensaje</button><button id="clear-saved" class="button button-ghost" type="button">Borrar datos guardados</button><span id="copy-status" role="status" aria-live="polite"></span></div><p class="save-note" id="save-status" role="status" aria-live="polite">Guardado automático activado en este navegador.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="rules-section section-wrap" id="normas" aria-labelledby="rules-title">
+      <div class="section-kicker">04 / INFORMACIÓN IMPORTANTE</div>
+      <div class="rules-layout">
+        <div><h2 id="rules-title">CLARO, SEGURO<br><span>Y DENTRO DEL ROL.</span></h2><p class="rules-lead">Esta página es una herramienta informativa del concesionario de LOS ÁNGLES RP.</p></div>
+        <div class="rules-list">
+          <article class="rule-item"><span>01</span><div><h3>Compra exclusivamente por ticket</h3><p>El vehículo se solicitará exclusivamente mediante un ticket oficial de Discord, siguiendo el procedimiento del servidor.</p></div></article>
+          <article class="rule-item"><span>02</span><div><h3>Esta web no realiza compras</h3><p>La página sirve únicamente para consultar vehículos y preparar el texto de la solicitud. No cobra, reserva, entrega ni tramita compras.</p></div></article>
+          <article class="rule-item"><span>03</span><div><h3>Respeta los procedimientos del servidor</h3><p>Cualquier intento de realizar trámites de vehículos fuera del procedimiento autorizado podrá conllevar la sanción que corresponda conforme a las normas del servidor.</p></div></article>
+          <article class="rule-item"><span>04</span><div><h3>Precios y disponibilidad</h3><p>Los precios mostrados son los indicados para el servidor y pueden requerir confirmación por parte del equipo. La disponibilidad final se confirma por ticket.</p></div></article>
+        </div>
+      </div>
+      <div class="legal-notice">
+        <p><strong>AVISO DE PROPIEDAD INTELECTUAL</strong></p>
+        <p><em>Los derechos sobre los contenidos originales, el diseño y los elementos propios de esta página se reservan a LOS ÁNGLES RP y al creador de la web, en la medida que corresponda legalmente. No se autoriza la copia, reproducción, distribución o plagio de dichos elementos sin permiso. Estas conductas podrán comunicarse y reclamarse por las vías que correspondan. La protección de la propiedad intelectual se rige, entre otras normas aplicables, por el Real Decreto Legislativo 1/1996, de 12 de abril, que aprueba el texto refundido de la Ley de Propiedad Intelectual, y por el artículo 270 del Código Penal cuando concurran los requisitos que establece la ley. El artículo 33 de la Constitución Española reconoce el derecho a la propiedad privada, y el artículo 149.1.9.ª atribuye al Estado competencia exclusiva en materia de legislación sobre propiedad intelectual.</em></p>
+        <p class="legal-small">Este aviso no sustituye asesoramiento jurídico. La aplicación de cada norma depende de las circunstancias concretas y de los requisitos legales aplicables.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">LA<span>•</span></span><span class="brand-copy"><strong>LOS ÁNGLES RP</strong><small>CONCESIONARIO OFICIAL</small></span></a>
+      <p>Tu historia. Tu camino. Tu próximo vehículo.</p>
+      <a href="#catalogo" class="footer-link">Volver al catálogo ↑</a>
+    </div>
+    <div class="footer-bottom"><span>© <span id="current-year">2026</span> Concesionario Los Ángeles RP · Página web propia.</span><span>Hecho para la comunidad de LOS ÁNGLES RP.</span></div>
+    <p class="footer-disclaimer">Sitio comunitario de roleplay no afiliado a Rockstar Games ni a Take-Two Interactive. Los nombres de vehículos se utilizan para identificar el catálogo del servidor.</p>
+  </footer>
+</body>
+</html>
